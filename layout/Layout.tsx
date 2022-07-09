@@ -1,19 +1,20 @@
-import React, { useRef, useState } from 'react';
-import cn from 'classnames';
-import { LayoutProps } from './Layout.props';
-import styles from './Layout.module.css';
-import { Sidebar } from './Sidebar/Sidebar';
-import { Header } from './Header/Header';
-import { Footer } from './Footer/Footer';
-import { AppContextProvider, IAppContext } from '../context/app.context';
-import { Up } from '../components';
+import React, { useRef, useState } from "react";
+import cn from "classnames";
+import { LayoutProps } from "./Layout.props";
+import styles from "./Layout.module.css";
+import { Sidebar } from "./Sidebar/Sidebar";
+import { Header } from "./Header/Header";
+import { Footer } from "./Footer/Footer";
+import { AppContextProvider, IAppContext } from "../context/app.context";
+import { Up } from "../components";
 
 export function Layout({ children }: LayoutProps): JSX.Element {
-  const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] = useState<boolean>(false);
+  const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] =
+    useState<boolean>(false);
   const bodyRef = useRef<HTMLDivElement>(null);
 
   const skipContentAction = (key: KeyboardEvent, secondCategory: string) => {
-    if (key.code === 'Space' || key.code === 'Enter') {
+    if (key.code === "Space" || key.code === "Enter") {
       key.preventDefault();
       bodyRef.current?.focus();
     }
@@ -43,12 +44,15 @@ export function Layout({ children }: LayoutProps): JSX.Element {
   );
 }
 
-export const withLayout = <T extends Record<string, unknown> & IAppContext >(Component: React.FunctionComponent<T>) => function withLayoutComponent(props: T): JSX.Element {
-  return (
-    <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
-      <Layout>
-        <Component {...props} />
-      </Layout>
-    </AppContextProvider>
-  );
-};
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(
+  Component: React.FunctionComponent<T>
+) =>
+  function withLayoutComponent(props: T): JSX.Element {
+    return (
+      <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+        <Layout>
+          <Component {...props} />
+        </Layout>
+      </AppContextProvider>
+    );
+  };

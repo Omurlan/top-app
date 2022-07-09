@@ -2,13 +2,16 @@ html,
 body {
     margin: 0;
     padding: 0;
+
     color: var(--black);
     background: #F5F6F8;
+
     font-family: var(--font-family);
 }
 
 a {
     text-decoration: none;
+
     color: inherit;
 }
 
@@ -17,10 +20,12 @@ a {
 }
 
 .visualyHidden {
+    position: absolute;
+
+    overflow: hidden;
+
     width: 0;
     height: 0;
-    overflow: hidden;
-    position: absolute;
 }
 
 :root {
@@ -28,12 +33,12 @@ a {
     --gray: #A4A4A4;
     --gray-light: #EBEBEB;
     --white: white;
-    --primary: #7351f5;
-    --primary-hover: #6344df;
+    --primary: #7351F5;
+    --primary-hover: #6344DF;
     --red: #FC836D;
-    --red-light: #fea291;
-    --green: #007a47;
+    --red-light: #FEA291;
+    --green: #007A47;
     --green-light: #C8F8E4;
-    --gray-dark: #6c7077;
+    --gray-dark: #6C7077;
     --font-family: "Noto Sans", sans-serif;
 }

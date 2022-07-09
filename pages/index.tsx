@@ -1,11 +1,9 @@
 // import { GetStaticProps } from 'next';
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // import axios from 'axios';
-import {
-  Button, Htag, Input, Paragraph, Rating, Tag,
-} from '../components';
-import { Textarea } from '../components/Textarea/Textarea';
-import { withLayout } from '../layout/Layout';
+import { Button, Htag, Input, Paragraph, Rating, Tag } from "../components";
+import { Textarea } from "../components/Textarea/Textarea";
+import { withLayout } from "../layout/Layout";
 // import { MenuItem } from '../interfaces/menu.interface';
 
 function Home(): JSX.Element {
@@ -15,13 +13,25 @@ function Home(): JSX.Element {
   return (
     <>
       <Htag tag="h1">sdfsdf</Htag>
-      <Button appearance="primary" arrow="right" onClick={() => setCounter(counter + 1)}>Кнопка</Button>
-      <Button appearance="ghost" arrow="down">Кнопка</Button>
+      <Button
+        appearance="primary"
+        arrow="right"
+        onClick={() => setCounter(counter + 1)}
+      >
+        Кнопка
+      </Button>
+      <Button appearance="ghost" arrow="down">
+        Кнопка
+      </Button>
       <Paragraph size="l">Больf</Paragraph>
       <Paragraph>Средний</Paragraph>
       <Paragraph size="s">Малsdенs</Paragraph>
-      <Tag color="green" size="m">200</Tag>
-      <Tag color="red" size="s">100</Tag>
+      <Tag color="green" size="m">
+        200
+      </Tag>
+      <Tag color="red" size="s">
+        100
+      </Tag>
       <Rating rating={rating} isEditable setRating={setRating} />
       <Input placeholder="Текст" />
       <Textarea />

@@ -1,16 +1,17 @@
 {
     "extends": [
         "stylelint-config-standard",
+        "stylelint-config-prettier",
         "stylelint-order-config-standard"
     ],
-    "plugins": [
-        "stylelint-order"
-    ],
+    "plugins": ["stylelint-order"],
     "rules": {
-        "indentation": [
-            4
-        ],
-        "max-line-length": 200,
-        "color-hex-case": "upper"
+        "indentation": [4],
+        "selector-class-pattern": ".",
+        "max-line-length": 999,
+        "color-hex-case": "upper",
+        "declaration-block-no-redundant-longhand-properties": [true, {
+            "severity": "warning"
+        }]
     }
 }

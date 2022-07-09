@@ -1,4 +1,4 @@
-import { TopLevelCategoryEnums } from './page.interface';
+import { TopLevelCategoryEnums } from "./page.interface";
 
 // Главная категория (1 уровень из 3)
 export interface FirstLevelMenuItem {
@@ -12,7 +12,7 @@ export interface FirstLevelMenuItem {
 export interface MenuItem {
   _id: {
     secondCategory: string;
-  },
+  };
   isOpened?: boolean;
   pages: PageItem[];
 }

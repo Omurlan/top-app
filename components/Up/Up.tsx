@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { useAnimation, motion } from 'framer-motion';
-import styles from './Up.module.css';
-import { useScrollY } from '../../hooks/useScrollY';
-import { ButtonIcon } from '../ButtonIcon/ButtonIcon';
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import styles from "./Up.module.css";
+import { useScrollY } from "../../hooks/useScrollY";
+import { ButtonIcon } from "../ButtonIcon/ButtonIcon";
 
 export function Up(): JSX.Element {
   const controls = useAnimation();
@@ -16,7 +16,7 @@ export function Up(): JSX.Element {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 

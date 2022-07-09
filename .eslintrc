@@ -1,55 +1,54 @@
 {
-	"root": true,
-	"parser": "@typescript-eslint/parser",
-	"plugins": [
-		"@typescript-eslint"
-	],
-	"rules": {
-		"no-use-before-define": "off",
-		"no-underscore-dangle": "off",
-		"react/jsx-no-constructed-context-values": "off",
-		"@typescript-eslint/no-use-before-define": "off",
-		"jsx-a11y/click-events-have-key-events": "off",
-		"jsx-a11y/no-static-element-interactions": "off",
-		"jsx-a11y/role-supports-aria-props": "off",
-		"no-param-reassign": "off",
-		"react/no-unused-prop-types": "off",
-		"no-restricted-syntax": "off",
-		"jsx-a11y/anchor-is-valid": "off",
-		"react/no-array-index-key": "off",
-		"no-await-in-loop": "off",
-		"max-len": 0,
-		"react/function-component-definition": [
-			2,
-			{
-				
-				"named-components": "arrow-function"
-			}
-		],
-		"react/jsx-props-no-spreading": "off",
-		"react/react-in-jsx-scope": "off",
-		"react/jsx-no-useless-fragment": "off",
-		"import/prefer-default-export": 0,
-		"semi": "off",
-		"@typescript-eslint/semi": [
-			"warn"
-		],
-		"@typescript-eslint/no-empty-interface": [
-			"error",
-			{
-				"allowSingleExtends": true
-			}
-		]
-	},
-	"extends": [
-		"airbnb",
-		"airbnb-typescript",
-		"eslint:recommended",
-		"plugin:@typescript-eslint/eslint-recommended",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:react-hooks/recommended"
-	],
-	"parserOptions": {
-		"project": "./tsconfig.json"
-	}
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-use-before-define": "off",
+    "no-underscore-dangle": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/role-supports-aria-props": "off",
+    "no-param-reassign": "off",
+    "jsx-quotes": "off",
+    "react/no-unused-prop-types": "off",
+    "no-restricted-syntax": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/no-array-index-key": "off",
+    "no-await-in-loop": "off",
+    "max-len": 0,
+    "react/function-component-definition": [
+      2,
+      {
+        "named-components": "arrow-function"
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "import/prefer-default-export": 0,
+    "semi": "off",
+    "@typescript-eslint/semi": ["warn"],
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": true
+      }
+    ]
+  },
+  "extends": [
+    "prettier",
+    "airbnb",
+    "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "prettier/prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
 }
