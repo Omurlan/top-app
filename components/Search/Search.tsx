@@ -5,7 +5,7 @@ import { SearchProps } from "./Search.props";
 import styles from "./Search.module.css";
 import { Input } from "../Input/Input";
 import { Button } from "../Button/Button";
-import SearchIcon from "./Search.svg";
+import SearchIcon from "./search.svg";
 
 export function Search({ className, ...props }: SearchProps): JSX.Element {
   const [search, setSearch] = useState<string>("");
