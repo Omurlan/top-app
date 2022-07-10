@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { KeyboardEvent, useState } from "react";
 import cn from "classnames";
 import { useRouter } from "next/router";
 import { SearchProps } from "./Search.props";

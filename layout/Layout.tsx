@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { KeyboardEvent, useRef, useState } from "react";
 import cn from "classnames";
 import { LayoutProps } from "./Layout.props";
 import styles from "./Layout.module.css";
@@ -13,7 +13,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
     useState<boolean>(false);
   const bodyRef = useRef<HTMLDivElement>(null);
 
-  const skipContentAction = (key: KeyboardEvent, secondCategory: string) => {
+  const skipContentAction = (key: KeyboardEvent) => {
     if (key.code === "Space" || key.code === "Enter") {
       key.preventDefault();
       bodyRef.current?.focus();
@@ -25,7 +25,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
     <div className={styles.wrapper}>
       <a
         onFocus={() => setIsSkipLinkDisplayed(true)}
-        tabIndex={1}
+        tabIndex={0}
         className={cn(styles.skipLink, {
           [styles.displayed]: isSkipLinkDisplayed,
         })}

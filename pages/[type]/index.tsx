@@ -49,5 +49,5 @@ interface TypeProps extends Record<string, unknown> {
 
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: firstLevelMenu.map((m) => `/${m.route}`),
-  fallback: true,
+  fallback: false,
 });

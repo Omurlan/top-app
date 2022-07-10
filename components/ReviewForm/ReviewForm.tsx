@@ -45,7 +45,9 @@ export function ReviewForm({
         setIsError("Что-то пошло не так");
       }
     } catch (e) {
-      setIsError(e.message);
+      if (e instanceof Error) {
+        setIsError(e.message);
+      }
     }
   };
 
