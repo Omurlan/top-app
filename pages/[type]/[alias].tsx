@@ -13,8 +13,13 @@ import { ProductModel } from "../../interfaces/product.interface";
 import { TopPageComponent } from "../../pageComponents";
 import { API } from "../../helpers/api";
 import { firstLevelMenu } from "../../helpers/helpers";
+import { Error404 } from "../404";
 
 function TopPage({ products, firstCategory, page }: TopPageProps): JSX.Element {
+  if (!page || !products) {
+    return <Error404 />;
+  }
+
   return (
     <>
       <Head>
@@ -49,7 +54,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
